@@ -1,5 +1,14 @@
-execute pathogen#infect()
 set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'scrooloose/nerdtree'
+call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
 set tabstop=2
@@ -11,7 +20,6 @@ set autowrite
 set autowriteall
 set modifiable
 set number
-colorscheme railscasts
 " let g:qb_hotkey = "<C-b>"
 nnoremap <C-b> :buffers<CR>:buffer<Space>
 let mapleader = ","
