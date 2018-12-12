@@ -10,6 +10,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'jlanzarotta/bufexplorer'
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
@@ -42,6 +43,9 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+map <Leader>b :call BufExplorer()<CR>
+
 let g:rspec_runner = "os_x_iterm2"
 let g:rspec_command = "!clear && bundle exec rspec {spec}"
 set mouse=a
